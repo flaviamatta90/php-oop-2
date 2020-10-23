@@ -25,12 +25,37 @@ class Employee extends User
 
 }
 
-    $flavia = new User();
-    $nome= "Flavia";
-    $eta = 66;
-    $flavia->setSconto($eta);
-    $flavia->getSconto();
-    echo $flavia->getSconto();
+    $user1 = new User();
+        $nome= "Flavia";
+        $eta = 66;
+        $user1->setSconto($eta);
+        $user1->getSconto();
 
+    $user2 = new Employee();
+        $nome = "Franco";
+        $eta = 40;
+        $livello = 2;
+        $user2->setSconto();
+        $user2->getSconto();
+
+    $users = [$user1, $user2];
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php foreach($users as $user){?>
+    <ul>
+        <li> <strong>NOME: </strong> <?php echo $user->nome; ?></li>
+        <li> <strong>ETA': </strong> <?php echo $user->eta; ?></li>
+        <li> <strong>SCONTO: </strong> <?php echo $user->getSconto(); ?></li>
+    </ul>
+    <?php } ?>
+</body>
+</html>
 
