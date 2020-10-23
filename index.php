@@ -27,18 +27,31 @@ class Employee extends User
 
     $user1 = new User();
         $user1->nome= "Flavia";
-        $user1->eta = 66;
+        $eta= $user1->eta = 66;
         $user1->setSconto($eta);
         $user1->getSconto();
 
-    $user2 = new Employee();
+    $user2 = new User();
         $user2->nome = "Franco";
-        $user2->eta = 40;
-        $livello = 2;
-        $user2->setSconto();
+        $eta= $user2->eta = 40;
+        $user2->setSconto($eta);
         $user2->getSconto();
 
-    $users = [$user1, $user2];
+    $user3 = new Employee();
+        $user3->nome= "Filippo";
+        $eta= $user3->eta = 23;
+        $livello = 1;
+        $user3->setSconto($eta);
+        $user3->getSconto();
+
+    $user4 = new Employee();
+        $user4->nome = "Fabiola";
+        $eta= $user4->eta = 54;
+        $livello = 2;
+        $user4->setSconto($eta);
+        $user4->getSconto();
+
+    $users = [$user1, $user2, $user3, $user4];
 ?>
 
 <!DOCTYPE html>
