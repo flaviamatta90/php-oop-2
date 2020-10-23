@@ -20,7 +20,7 @@ class Employee extends User
     public $livello;
     public function setSconto($eta = null)
     {
-    $this->sconto = $this->livello * 1;
+    $this->sconto = $this->livello * 30;
     }
 
 }
@@ -46,10 +46,11 @@ class Employee extends User
 
     $user4 = new Employee();
         $user4->nome = "Fabiola";
-        $eta= $user4->eta = 54;
-        $livello = 2;
+        $eta= $user4->eta = 70;
+        $livello = 1;
         $user4->setSconto($eta);
         $user4->getSconto();
+        
 
     $users = [$user1, $user2, $user3, $user4];
 ?>
